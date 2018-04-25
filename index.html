@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spy Scroll</title>
+    <style>
+        body {
+            background-color: #eee;
+        }
+
+        .menu-options {
+            display: flex;
+        }
+
+        .container {
+            width: 600px;
+            margin: auto;
+        }
+
+        .view-port {
+            height: 800px;
+            overflow-y: auto;
+            background-color: #fff;
+        }
+
+        .view-port {
+            scroll-behavior: smooth;
+        }
+
+        .menu-options {
+            background-color: #f4f4f4;
+        }
+
+        .menu-options .menu-item {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .menu-item.active {
+            border-bottom: 2px solid #1ce;
+        }
+
+        .content {
+            height: 500px;
+            border-bottom: 5px solid #333;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 78px;
+            color: #666;
+        }
+
+        .content:last-child {
+            min-height: 800px;
+        }
+    </style>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu-options">
+            <div class="menu-item active">Menu1</div>
+            <div class="menu-item">Menu2</div>
+            <div class="menu-item">Menu3</div>
+            <div class="menu-item">Menu4</div>
+            <div class="menu-item">Menu5</div>
+        </div>
+        <div class="view-port" id="view-port">
+            <div class="content">1</div>
+            <div class="content">2</div>
+            <div class="content">3</div>
+            <div class="content">4</div>
+            <div class="content">5</div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
